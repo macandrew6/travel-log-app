@@ -27,6 +27,7 @@ subTodo
 
 - Title
 - Description
+- Comments
 - Image
 - Start Date
 - End Date
