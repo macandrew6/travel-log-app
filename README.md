@@ -2,7 +2,7 @@
 
 A full stack application to store / list places you have traveled.
 
-TODO
+### TODO
 
 - [x] Setup Server
   - [x] Install Dependencies
@@ -20,3 +20,15 @@ TODO
 - [ ] Create Form to add a new entry
 - [ ] Setup Map SDK on client
 - [ ] List all log entries on map
+
+subTodo
+
+# Log Entry
+
+- Title
+- Description
+- Image
+- Start Date
+- End Date
+- Latitude
+- Longitude
