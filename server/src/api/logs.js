@@ -10,10 +10,14 @@ router.get('/', (req, res) => {
   });
 });
 
-router.post('/', async (req, res) => {
+router.post('/', async (req, res, next) => {
   try {
     const logEntry = new LogEntry(req.body).save();
-  } catch (err) {}
+    const createdEntry = await logEntry.save();
+    res.json(createdEntry);
+  } catch (err) {
+    next(err);
+  }
   console.log(req.body);
 });
 
