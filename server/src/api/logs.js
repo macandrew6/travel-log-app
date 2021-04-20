@@ -10,8 +10,10 @@ router.get('/', (req, res) => {
   });
 });
 
-router.post('/', (req, res) => {
-  const logEntry = new LogEntry(req.body);
+router.post('/', async (req, res) => {
+  try {
+    const logEntry = new LogEntry(req.body).save();
+  } catch (err) {}
   console.log(req.body);
 });
 
