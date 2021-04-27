@@ -16,6 +16,9 @@ router.post('/', async (req, res, next) => {
     const createdEntry = await logEntry.save();
     res.json(createdEntry);
   } catch (err) {
+    if (err.name === 'ValidationError') {
+      res.status(422);
+    }
     next(err);
   }
   console.log(req.body);
